@@ -1,0 +1,15 @@
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/frontend/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/frontend/js/jquery.js"></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.sticky-kit.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.smartmenus.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.sticky.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.dryMenu.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/isotope.pkgd.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.carouFredSel-6.2.0-packed.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.mousewheel.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.touchSwipe.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/imagesloaded.pkgd.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.prettyPhoto.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/SmoothScroll.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/script.js'></script>

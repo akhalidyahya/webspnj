@@ -2,21 +2,7 @@
 <html lang="en-US">
 <head>
 	<title><?php echo $template['title'] ?></title>
-	<meta charset="utf-8">
-	<link rel="icon" href="<?php echo base_url(); ?>assets/frontend/img/favicon.png" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Web profile of Sahabat PNJ" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, PHP, SPNJ, TIK, PNJ, HIMATIK" />
-    <meta name="author" content="SPNJ" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900|Montserrat:400,700|PT+Serif' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/main.css' />
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/css/clear.css' />
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/css/font-awesome.min.css' />
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/css/carouFredSel.css' />
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/css/prettyPhoto.css' />
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/css/common.css' />
-	<link rel="stylesheet" type="text/css"  href='<?php echo base_url(); ?>assets/frontend/css/sm-clean.css' />
+	<?php $this->load->view('main/layout/head'); ?>
 </head>
 
 	<body>
@@ -76,7 +62,7 @@
 							</li>
 							<li>
 								<div class="tentang-holder ">
-									<img src="demo-images/icon_03.png" alt="">
+									<img src="<?php echo base_url(); ?>assets/frontend/img/icon-3.png" alt="">
 									<div class="tentang-content-holder">
 										<div class="tentang-title">WEBSITE</div>
 										<div class="tentang-content">
@@ -85,7 +71,7 @@
 									</div>
 								</div>
 								<div class="tentang-holder ">
-									<img src="demo-images/icon_04.png" alt="">
+									<img src="<?php echo base_url(); ?>assets/frontend/img/icon-4.png" alt="">
 									<div class="tentang-content-holder">
 										<div class="tentang-title">ANDROID</div>
 										<div class="tentang-content">
@@ -94,7 +80,7 @@
 									</div>
 								</div>
 								<div class="tentang-holder ">
-									<img src="demo-images/icon_02.png" alt="">
+									<img src="<?php echo base_url(); ?>assets/frontend/img/icon-2.png" alt="">
 									<div class="tentang-content-holder">
 										<div class="tentang-title">MOTION GRAPHIC</div>
 										<div class="tentang-content">
@@ -313,7 +299,7 @@
 				<div class="clear"></div>
 				<div class="block galeri-load-more-holder">
 					<a target="_self" class="more-posts">LOAD MORE</a>
-					<img src="images/icon_infinity.svg" alt="Load more">
+					<img src="<?php echo base_url(); ?>assets/frontend/images/icon_infinity.svg" alt="Load more">
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -374,7 +360,7 @@
 					<div class="grid-sizer"></div>
 					<div class="grid-item element-item p_one_half">
 						<a href="singlekarya.html">
-							<img src="demo-images/portfolio_item_08.jpg" alt="">
+							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-7.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
@@ -389,7 +375,7 @@
 					</div>
 					<div class="grid-item element-item p_one_half">
 						<a href="singlekarya.html">
-							<img src="demo-images/portfolio_item_03.jpg" alt="">
+							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-8.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
@@ -404,7 +390,7 @@
 					</div>
 					<div class="grid-item element-item p_one_half">
 						<a href="singlekarya.html">
-							<img src="demo-images/portfolio_item_02.jpg" alt="">
+							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-9.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
@@ -419,7 +405,7 @@
 					</div>
 					<div class="grid-item element-item p_one_half">
 						<a href="singlekarya.html">
-							<img src="demo-images/about_img_01.jpg" alt="">
+							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-10.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
@@ -434,7 +420,7 @@
 					</div>
 					<div class="grid-item element-item p_one_half">
 						<a href="singlekarya.html">
-							<img src="demo-images/portfolio_item_08.jpg" alt="">
+							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-7.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
@@ -449,7 +435,7 @@
 					</div>
 					<div class="grid-item element-item p_one_half">
 						<a href="singlekarya.html">
-							<img src="demo-images/portfolio_item_03.jpg" alt="">
+							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-8.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
@@ -467,7 +453,7 @@
 				<div class="clear"></div>
 				<div class="block galeri-load-more-holder">
 					<a target="_self" class="more-posts">LOAD MORE</a>
-					<img src="images/icon_infinity.svg" alt="Load more">
+					<img src="<?php echo base_url(); ?>assets/frontend/images/icon_infinity.svg" alt="Load more">
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -500,31 +486,31 @@
                     <div class="caroufredsel_wrapper">
                         <ul id="fwslider1" class="fw-image-slider">
                             <li class="fw-slide">
-                                <img src="demo-images/icon_editing.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_editing.png" alt="">
                                 <p class="fw-slide-text">Video Editing</p>
                             </li>
                             <li class="fw-slide">
-                                <img src="demo-images/icon_clear.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_clear.png" alt="">
                                 <p class="fw-slide-text">Premium Cleer</p>
                             </li>
                             <li class="fw-slide">
-                                <img src="demo-images/icon_display.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_display.png" alt="">
                                 <p class="fw-slide-text">For All Displays</p>
                             </li>
                             <li class="fw-slide">
-                                <img src="demo-images/icon_time.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_time.png" alt="">
                                 <p class="fw-slide-text">Right On Time</p>
                             </li>
                             <li class="fw-slide">
-                                <img src="demo-images/icon_ideas.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_ideas.png" alt="">
                                 <p class="fw-slide-text">Innovative Ideas</p>
                             </li>
                             <li class="fw-slide">
-                                <img src="demo-images/icon_sound.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_sound.png" alt="">
                                 <p class="fw-slide-text">Perfect Sound</p>
                             </li>
                             <li class="fw-slide">
-                                <img src="demo-images/icon_solution.png" alt="">
+                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_solution.png" alt="">
                                 <p class="fw-slide-text">3D Solution</p>
                             </li>
                         </ul>
@@ -550,19 +536,5 @@
 </body>
 
 <!--Load JavaScript-->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/frontend/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/frontend/js/jquery.js"></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.sticky-kit.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.smartmenus.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.sticky.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.dryMenu.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/isotope.pkgd.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.carouFredSel-6.2.0-packed.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.mousewheel.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.touchSwipe.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.easing.1.3.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/imagesloaded.pkgd.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/jquery.prettyPhoto.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/SmoothScroll.min.js'></script>
-<script type='text/javascript' src='<?php echo base_url(); ?>assets/frontend/js/script.js'></script>
+<?php $this->load->view('main/layout/javascript'); ?>
 </html>
