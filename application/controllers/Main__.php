@@ -22,7 +22,7 @@ class Main__ extends CI_Controller {
 			$data['news'] = $this->m_main->read_news();
 			$data['grafik'] = $this->m_main->grafik_news();
 			$data['sidebar'] = $this->load->view('main__/layout/admin/sidebar','',true);
-			$data['content'] = $this->load->view('main__/pages/dashboard','',true);
+			$data['content'] = $this->load->view('main__/pages/dashboard',array('template'=>$data),true);
 			$this->load->view('main__/pages/home',array('template'=>$data));
 		} else if ($this->session->userdata('role') == 'superadmin') {
 			$data['title'] = 'Sahabat PNJ';
