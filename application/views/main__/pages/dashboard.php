@@ -75,6 +75,7 @@
       <div class="col-md-12">
         <div class="box">
           <div>
+          <h4 align="center">News per Category</h4>
           <?php
             foreach($template['grafik'] as $data){
                 $category_id[] = $data->category_id;
