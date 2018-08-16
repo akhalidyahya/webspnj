@@ -146,69 +146,23 @@
 				<div class="content-wrapper">
 					<div class="blog-holder block center-relative">
 
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">01</div>
-							<div class="info">
-								<div class="author vcard ">Robert Williams</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">BRANDING</a></li>
-									</ul>
+						<?php foreach ($berita as $data) { ?>
+							<article class="relative berita-item-holder center-relative">
+								<div class="num">01</div>
+								<div class="info">
+									<div class="author vcard ">Robert Williams</div>
+									<div class="category-links">
+										<ul>
+											<li><a href="#">BRANDING</a></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Eiusmod tempor incididunt ut dolore magna labore eiusmod ipsum dolor</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
-
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">02</div>
-							<div class="info">
-								<div class="author vcard ">Jim Davis</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">TECH</a></li>
-									</ul>
-								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Incididunt ut dolore magna labore eiusmod lorem ipsum dolor sit</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
-
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">03</div>
-							<div class="info">
-								<div class="author vcard ">Ann Peterson</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">CRAFTING</a></li>
-									</ul>
-								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Labore eiusmod lorem ipsum dolor sit amet nunc labore incididunt ut dolore</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
-
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">04</div>
-							<div class="info">
-								<div class="author vcard ">Robert Williams</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">CRAFTING</a></li>
-									</ul>
-								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Dolor sit amet nunc labore incididunt ut dolore magna labore eiusmod</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
+								<h3 class="entry-title">
+									<a href="#">Eiusmod tempor incididunt ut dolore magna labore eiusmod ipsum dolor</a>
+								</h3>
+								<div class="clear"></div>
+							</article>
+						<?php } ?>
 
 						<div class="latest-post-bottom-text">
 							<a href="#">SEMUA BERITA</a>

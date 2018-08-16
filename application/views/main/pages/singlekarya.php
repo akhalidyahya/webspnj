@@ -1,3 +1,17 @@
+<?php 
+$title="";
+$desc="";
+$pict="";
+$cat="";
+$team ="";
+foreach ($template['berita'] as $data) {
+    $title = $data->title;
+    $desc = $data->description;
+    $pict = $data->picture;
+    $cat = $data->category;
+    $team = $data->team;        
+}
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
@@ -22,14 +36,14 @@
 
         <article id="singleberita" class="section portfolio">
             <div class="center-relative content-1170">
-                <a href="index.html"><img class="nav-logo" src="<?php echo base_url(); ?>assets/frontend/img/logo-white.png" alt="SPNJ" /></a>
+                <a href="<?php echo base_url(); ?>"><img class="nav-logo" src="<?php echo base_url(); ?>assets/frontend/img/logo-white.png" alt="SPNJ" /></a>
                 <div class="entry-content">
                     <div class="content-wrap relative">
-                        <a class="absolute x-close" href="index.html#karya">
+                        <a class="absolute x-close" href="<?php echo base_url(); ?>#karya">
                             <img src="<?php echo base_url(); ?>assets/frontend/images/icon_x.svg" alt="Close">
                         </a>
                         <div class="one margin-0">
-                            <img src="<?php echo base_url(); ?>assets/frontend/img/demo-11.jpg" alt="">
+                            <img src="<?php echo base_url().$pict; ?>" alt="">
                         </div>
 
                         <div class="clear"></div>
@@ -38,19 +52,15 @@
                         <br>
                         <div class="one_half text-right">
                             <p>
-                                <span style="color: #adadad;">Karya:</span> Handmade<br>
-                                <span style="color: #adadad;">Kategori:</span> Est Lorem<br>
+                                <span style="color: #adadad;">Karya:</span> <?php echo $team ?><br>
+                                <span style="color: #adadad;">Kategori:</span> <?php echo $cat ?><br>
                             </p>
                             <br>
                             <br>
                         </div>
                         <div class="one_half last ">
-                            <h1>Handmade for Everyone</h1>
-                            <p>We choose to go to the moon in this decade and do the other things, not because they are easy.</p>
-                            <br>
-                            <p>
-                                Because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone and one.<br>
-                            </p>
+                            <h1><?php echo $title ?></h1>
+                            <?php echo $desc ?>
                         </div>
                         <div class="clear"></div>
                     </div>

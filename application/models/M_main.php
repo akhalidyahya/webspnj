@@ -109,6 +109,24 @@ class M_main extends CI_Model{
         return $sql;
     }
 
+    function getKarya($id)
+    {
+        $sql = $this->db->query("SELECT karya.id,karya.title,karya.description,karya.picture,karya.team,categories.category
+                                FROM karya
+                                INNER JOIN categories ON categories.id = karya.category_id
+                                WHERE karya.id = $id ");
+        return $sql;
+    }
+
+    function read_karya_home(){
+        $sql = $this->db->query("SELECT karya.id,karya.title,karya.description,karya.picture,karya.team,categories.category
+                                FROM karya
+                                INNER JOIN categories ON categories.id = karya.category_id
+                                ORDER BY id ASC
+                                LIMIT 6 ");
+        return $sql;
+    }
+
     function read_categories_karya(){
         $sql = $this->db->query("SELECT * FROM categories");
         return $sql;
@@ -170,6 +188,27 @@ class M_main extends CI_Model{
                                 FROM news
                                 INNER JOIN categories ON categories.id = news.category_id 
                                 INNER JOIN users ON users.id = news.user_id");
+        return $sql;
+    }
+
+    function read_news_home(){
+        $sql = $this->db->query("SELECT news.id,news.judul,news.description,news.picture,news.date,categories.category,users.nama
+                                FROM news
+                                INNER JOIN categories ON categories.id = news.category_id 
+                                INNER JOIN users ON users.id = news.user_id
+                                ORDER BY news.date DESC
+                                LIMIT 4");
+        return $sql;
+    }
+
+    function getNews($id)
+    {
+        $sql = $this->db->query("SELECT news.id,news.judul,news.description,news.picture,news.date,categories.category,users.nama
+                                FROM news
+                                LEFT JOIN categories ON categories.id = news.category_id 
+                                LEFT JOIN users ON users.id = news.user_id
+                                WHERE news.id = $id
+                                ");
         return $sql;
     }
 

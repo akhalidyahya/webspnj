@@ -49,12 +49,9 @@
 							<li>
 								<div class="tentang-content">
 									<h2>SEJARAH</h2>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									Sahabat PNJ merupakan sebuah KSM yang bergerak dibidang pendidikan. Didalam KSM SPNJ terdapat 3 divisi utama. Yaitu
+									divisi website, android, dan motion graphic. Kita dapat memilih
+									salah satu dari ketiga divisi tersebut untuk belajar bersama-sama. Selain itu juga kita juga dapat menghasilkan karya-karya yang dapat dipamerkan sehingga membuat bangga diri kita dan TIK tentunya.
 									<div class="swipe pull-right">
 										Swipe <i class="fa fa-caret-right"></i>
 									</div>
@@ -66,7 +63,7 @@
 									<div class="tentang-content-holder">
 										<div class="tentang-title">WEBSITE</div>
 										<div class="tentang-content">
-											Donecos arem ipsum sit amet consectetur adipisicing elit sed eiusmod tempor incididunt ut donecos dolore ipsum temporest.<br />
+											Disini, kita akan belajar bagaimana membuat website mulai dari 0 hingga website secara keseluruhan.<br />
 										</div>
 									</div>
 								</div>
@@ -75,7 +72,7 @@
 									<div class="tentang-content-holder">
 										<div class="tentang-title">ANDROID</div>
 										<div class="tentang-content">
-											Disum lorem sit amet consectetur adipisicing elit sed eiusmod tempor incididunt ut donecos dolore ipsum temporest.<br />
+											Disini, kita akan belajar bagaimana membuat aplikasi android mulai dari 0 hingga aplikasi secara keseluruhan.<br />
 										</div>
 									</div>
 								</div>
@@ -84,7 +81,7 @@
 									<div class="tentang-content-holder">
 										<div class="tentang-title">MOTION GRAPHIC</div>
 										<div class="tentang-content">
-											Polor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt ut dolore magna labore eiusmod.<br />
+											Disini, kita akan belajar bagaimana membuat sebuah video motion graphic mulai dari 0 hingga jadi secara keseluruhan.<br />
 										</div>
 									</div>
 								</div>
@@ -115,72 +112,26 @@
 				<div class="content-wrapper">
 					<div class="blog-holder block center-relative">
 
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">01</div>
-							<div class="info">
-								<div class="author vcard ">Robert Williams</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">BRANDING</a></li>
-									</ul>
+						<?php $no = 1; foreach ($template['berita'] as $data) { ?>
+							<article class="relative berita-item-holder center-relative">
+								<div class="num"><?php echo "0".$no; ?></div>
+								<div class="info">
+									<div class="author vcard "><?php echo $data->nama; ?></div>
+									<div class="category-links">
+										<ul>
+											<li><a href="#"><?php echo $data->category; ?></a></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Eiusmod tempor incididunt ut dolore magna labore eiusmod ipsum dolor</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
-
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">02</div>
-							<div class="info">
-								<div class="author vcard ">Jim Davis</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">TECH</a></li>
-									</ul>
-								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Incididunt ut dolore magna labore eiusmod lorem ipsum dolor sit</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
-
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">03</div>
-							<div class="info">
-								<div class="author vcard ">Ann Peterson</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">CRAFTING</a></li>
-									</ul>
-								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Labore eiusmod lorem ipsum dolor sit amet nunc labore incididunt ut dolore</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
-
-						<article class="relative berita-item-holder center-relative">
-							<div class="num">04</div>
-							<div class="info">
-								<div class="author vcard ">Robert Williams</div>
-								<div class="category-links">
-									<ul>
-										<li><a href="#">CRAFTING</a></li>
-									</ul>
-								</div>
-							</div>
-							<h3 class="entry-title">
-								<a href="#">Dolor sit amet nunc labore incididunt ut dolore magna labore eiusmod</a>
-							</h3>
-							<div class="clear"></div>
-						</article>
+								<h3 class="entry-title">
+									<a href="<?php echo base_url();?>index.php/berita/detail/<?php echo $data->id; ?>"><?php echo strip_tags(substr($data->judul,0,105)) ?></a>
+								</h3>
+								<div class="clear"></div>
+							</article>
+						<?php $no++; } ?>
 
 						<div class="latest-post-bottom-text">
-							<a href="#">SEMUA BERITA</a>
+							<a href="<?php echo base_url();?>index.php/berita">SEMUA BERITA</a>
 						</div>
 					</div>
 
@@ -205,90 +156,90 @@
 				<div class="grid" id="galeri-grid">
 					<div class="grid-sizer"></div>
 					<div class="grid-item element-item p_one">
-						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>assets/frontend/img/demo-1.jpg">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-1.jpg" alt="">
+						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>uploads/galleries/DLg7BFhV4AAJxly.jpg">
+							<img src="<?php echo base_url(); ?>uploads/galleries/DLg7BFhV4AAJxly.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
 										<!-- <img src="images/icon_post.svg" alt=""> -->
 										<i class="fa fa-search" style="font-size: 4em;"></i>
 									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
+									<p class="galeri-text">OPERN RECRUITMENT</p>
 									
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="grid-item element-item p_one_half">
-						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>assets/frontend/img/demo-2.jpg">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-2.jpg" alt="">
+						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>uploads/galleries/IMG-20171027-WA0007.jpg">
+							<img src="<?php echo base_url(); ?>uploads/galleries/IMG-20171027-WA0007.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
 										<!-- <img src="images/icon_post.svg" alt=""> -->
 										<i class="fa fa-search" style="font-size: 4em;"></i>
 									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
+									<p class="galeri-text">BELAJAR</p>
 									
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="grid-item element-item p_one_half">
-						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>assets/frontend/img/demo-3.jpg">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-3.jpg" alt="">
+						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>uploads/galleries/29089581_155237701959776_6286609996989857792_n.jpg">
+							<img src="<?php echo base_url(); ?>uploads/galleries/29089581_155237701959776_6286609996989857792_n.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
 										<!-- <img src="images/icon_post.svg" alt=""> -->
 										<i class="fa fa-search" style="font-size: 4em;"></i>
 									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
+									<p class="galeri-text">LINE SQUARE</p>
 									
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="grid-item element-item p_one_half">
-						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>assets/frontend/img/demo-4.jpg">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-4.jpg" alt="">
+						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>uploads/galleries/DLDdloRU8AIqIx0.jpg">
+							<img src="<?php echo base_url(); ?>uploads/galleries/DLDdloRU8AIqIx0.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
 										<!-- <img src="images/icon_post.svg" alt=""> -->
 										<i class="fa fa-search" style="font-size: 4em;"></i>
 									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
+									<p class="galeri-text">OR</p>
 									
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="grid-item element-item p_one_half">
-						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>assets/frontend/img/demo-5.jpg">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-5.jpg" alt="">
+						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>uploads/galleries/z.jpg">
+							<img src="<?php echo base_url(); ?>uploads/galleries/z.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
 										<!-- <img src="images/icon_post.svg" alt=""> -->
 										<i class="fa fa-search" style="font-size: 4em;"></i>
 									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
+									<p class="galeri-text">kerjasama</p>
 									
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="grid-item element-item p_one">
-						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>assets/frontend/img/demo-6.jpg">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-6.jpg" alt="">
+						<a data-rel="prettyPhoto[gallery1]" href="<?php echo base_url(); ?>uploads/galleries/DLgIEHCVoAAloBj.jpg">
+							<img src="<?php echo base_url(); ?>uploads/galleries/DLgIEHCVoAAloBj.jpg" alt="">
 							<div class="galeri-text-holder">
 								<div class="galeri-text-wrapper">
 									<p class="galeri-type">
 										<!-- <img src="images/icon_post.svg" alt=""> -->
 										<i class="fa fa-search" style="font-size: 4em;"></i>
 									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
+									<p class="galeri-text">wawancara</p>
 									
 								</div>
 							</div>
@@ -298,7 +249,7 @@
 
 				<div class="clear"></div>
 				<div class="block galeri-load-more-holder">
-					<a target="_self" class="more-posts">LOAD MORE</a>
+					<a target="_self" href="http://www.instagram.com/sahabat_pnj" class="more-posts">LOAD MORE</a>
 					<img src="<?php echo base_url(); ?>assets/frontend/images/icon_infinity.svg" alt="Load more">
 				</div>
 			</div>
@@ -356,103 +307,30 @@
 				<h2 class="entry-title">Kar ya</h2>
 			</div>
 			<div class="section-content-holder galeri-holder left">
-				<div class="grid" id="galeri-grid">
-					<div class="grid-sizer"></div>
-					<div class="grid-item element-item p_one_half">
-						<a href="singlekarya.html">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-7.jpg" alt="">
-							<div class="galeri-text-holder">
-								<div class="galeri-text-wrapper">
-									<p class="galeri-type">
-										<!-- <img src="images/icon_post.svg" alt=""> -->
-										<i class="fa fa-search" style="font-size: 4em;"></i>
-									</p>
-									<p class="galeri-text">PRODUCT TITLE</p>
-									<p class="galeri-sec-text">Android</p>
+				<?php foreach ($template['karya'] as $data) { ?>
+					<div class="grid" id="galeri-grid">
+						<div class="grid-sizer"></div>
+						<div class="grid-item element-item p_one_half">
+							<a href="<?php echo base_url();?>index.php/hasil/detail/<?php echo $data->id ?>">
+								<img src="<?php echo base_url().$data->picture; ?>" alt="">
+								<div class="galeri-text-holder">
+									<div class="galeri-text-wrapper">
+										<p class="galeri-type">
+											<!-- <img src="images/icon_post.svg" alt=""> -->
+											<i class="fa fa-search" style="font-size: 4em;"></i>
+										</p>
+										<p class="galeri-text"><?php echo $data->title ?></p>
+										<p class="galeri-sec-text"><?php echo $data->category ?></p>
+									</div>
 								</div>
-							</div>
-						</a>
+							</a>
+						</div>
 					</div>
-					<div class="grid-item element-item p_one_half">
-						<a href="singlekarya.html">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-8.jpg" alt="">
-							<div class="galeri-text-holder">
-								<div class="galeri-text-wrapper">
-									<p class="galeri-type">
-										<!-- <img src="images/icon_post.svg" alt=""> -->
-										<i class="fa fa-search" style="font-size: 4em;"></i>
-									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
-									<p class="galeri-sec-text">Android</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="grid-item element-item p_one_half">
-						<a href="singlekarya.html">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-9.jpg" alt="">
-							<div class="galeri-text-holder">
-								<div class="galeri-text-wrapper">
-									<p class="galeri-type">
-										<!-- <img src="images/icon_post.svg" alt=""> -->
-										<i class="fa fa-search" style="font-size: 4em;"></i>
-									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
-									<p class="galeri-sec-text">Website</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="grid-item element-item p_one_half">
-						<a href="singlekarya.html">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-10.jpg" alt="">
-							<div class="galeri-text-holder">
-								<div class="galeri-text-wrapper">
-									<p class="galeri-type">
-										<!-- <img src="images/icon_post.svg" alt=""> -->
-										<i class="fa fa-search" style="font-size: 4em;"></i>
-									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
-									<p class="galeri-sec-text">Website</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="grid-item element-item p_one_half">
-						<a href="singlekarya.html">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-7.jpg" alt="">
-							<div class="galeri-text-holder">
-								<div class="galeri-text-wrapper">
-									<p class="galeri-type">
-										<!-- <img src="images/icon_post.svg" alt=""> -->
-										<i class="fa fa-search" style="font-size: 4em;"></i>
-									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
-									<p class="galeri-sec-text">Motion Graphic</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="grid-item element-item p_one_half">
-						<a href="singlekarya.html">
-							<img src="<?php echo base_url(); ?>assets/frontend/img/demo-8.jpg" alt="">
-							<div class="galeri-text-holder">
-								<div class="galeri-text-wrapper">
-									<p class="galeri-type">
-										<!-- <img src="images/icon_post.svg" alt=""> -->
-										<i class="fa fa-search" style="font-size: 4em;"></i>
-									</p>
-									<p class="galeri-text">IMAGE TITLE</p>
-									<p class="galeri-sec-text">Website</p>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+				<?php } ?>
 
 				<div class="clear"></div>
 				<div class="block galeri-load-more-holder">
-					<a target="_self" class="more-posts">LOAD MORE</a>
+					<a target="_self" href="<?php echo base_url();?>index.php/hasil" class="more-posts">LOAD MORE</a>
 					<img src="<?php echo base_url(); ?>assets/frontend/images/icon_infinity.svg" alt="Load more">
 				</div>
 			</div>
@@ -485,34 +363,12 @@
                 <div class="fwslider1 fw-image-slider-holder list_carousel relative">
                     <div class="caroufredsel_wrapper">
                         <ul id="fwslider1" class="fw-image-slider">
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_editing.png" alt="">
-                                <p class="fw-slide-text">Video Editing</p>
-                            </li>
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_clear.png" alt="">
-                                <p class="fw-slide-text">Premium Cleer</p>
-                            </li>
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_display.png" alt="">
-                                <p class="fw-slide-text">For All Displays</p>
-                            </li>
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_time.png" alt="">
-                                <p class="fw-slide-text">Right On Time</p>
-                            </li>
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_ideas.png" alt="">
-                                <p class="fw-slide-text">Innovative Ideas</p>
-                            </li>
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_sound.png" alt="">
-                                <p class="fw-slide-text">Perfect Sound</p>
-                            </li>
-                            <li class="fw-slide">
-                                <img src="<?php echo base_url(); ?>assets/frontend/img/icon_solution.png" alt="">
-                                <p class="fw-slide-text">3D Solution</p>
-                            </li>
+                        	<?php foreach ($template['media'] as $data) { ?>
+	                            <li class="fw-slide">
+	                                <img src="<?php echo base_url().$data->picture;?>" alt="">
+	                                <p class="fw-slide-text"><?php echo $data->title ?></p>
+	                            </li>
+                        	<?php } ?>
                         </ul>
                     </div>
                     <div class="clear"></div>

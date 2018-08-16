@@ -6,12 +6,18 @@ class Main extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('m_main');
 	}
 
 	public function index()
 	{
-		$data['title'] = 'Sahabat PNJ';
 		// $data['body'] = $this->load->view('main/pages/home');
+		$data = array(
+			'berita' => $this->m_main->read_news_home()->result() , 
+			'title' => 'Sahabat PNJ' , 
+			'karya' => $this->m_main->read_karya_home()->result() , 
+			'media' => $this->m_main->read_media()->result()
+		);
 		$this->load->view('main/pages/home',array('template'=>$data));
 	}
 

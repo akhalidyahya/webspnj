@@ -98,4 +98,13 @@ class News extends CI_Controller {
 		$this->m_main->delete_news($id);
 		redirect('news');
 	}
+
+    public function detail_news($id)
+    {
+        $data = array(
+            'title' => 'Sahabat PNJ',
+            'berita' => $this->m_main->getNews($id)->result(),
+        );
+        $this->load->view('main/pages/singlenews',array('template'=>$data));
+    }
 }

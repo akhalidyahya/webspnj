@@ -1,7 +1,7 @@
 <footer style="background-color: #110d3e; color: #fff !important;">
    <div class="footer content-1170 center-relative">
       <ul style="color: #cecece !important;">
-         <li>Made with <i class="fa fa-heart"></i></li>
+         <li>Made with :)</li>
          <li class="copyright-footer">
             &copy; 2018 SPNJ | Follow us on:
         </li>

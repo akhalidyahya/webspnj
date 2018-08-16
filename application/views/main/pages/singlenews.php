@@ -1,3 +1,19 @@
+<?php 
+$judul="";
+$desc="";
+$pict="";
+$date="";
+$cat="";
+$nama ="";
+foreach ($template['berita'] as $data) {
+    $judul = $data->judul;
+    $desc = $data->description;
+    $pict = $data->picture;
+    $date = $data->date;
+    $cat = $data->category;
+    $nama = $data->nama;        
+}
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
@@ -25,11 +41,11 @@
                 <a href="index.html"><img class="nav-logo" src="<?php echo base_url(); ?>assets/frontend/img/logo-white.png" alt="SPNJ" /></a>
                 <div class="entry-content">
                     <div class="content-wrap relative">
-                        <a class="absolute x-close" href="index.html#berita">
+                        <a class="absolute x-close" href="<?php echo base_url(); ?>#berita">
                             <img src="<?php echo base_url(); ?>assets/frontend/images/icon_x.svg" alt="Close">
                         </a>
                         <div class="one margin-0">
-                            <img src="<?php echo base_url(); ?>assets/frontend/img/demo-11.jpg" alt="">
+                            <img src="<?php echo base_url().$pict; ?>" alt="">
                         </div>
 
                         <div class="clear"></div>
@@ -38,19 +54,15 @@
                         <br>
                         <div class="one center-text">
                             <p>
-                                <span style="color: #adadad;">Penulis:</span> John Doe<br>
-                                <span style="color: #adadad;">kategori:</span> Event<br>
-                                <span style="color: #adadad;">Terbit:</span> Senin, 20 Juli 2017 20:00
+                                <span style="color: #adadad;">Penulis:</span> <?php echo $nama ?><br>
+                                <span style="color: #adadad;">kategori:</span> <?php echo $cat ?><br>
+                                <span style="color: #adadad;">Terbit:</span> <?php echo date('D, m M Y', strtotime($date)) ?>
                             </p>
                         </div>
                         <div class="one last" class="konten-berita">
-                            <h1>Handmade for Everyone</h1>
+                            <h1><?php echo $judul ?></h1>
                             <div class="teks-berita">
-                                <p>We choose to go to the moon in this decade and do the other things, not because they are easy.</p>
-                                <br>
-                                <p>
-                                    Because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone and one.<br>
-                                </p>
+                                <?php echo $desc ?>
                             </div>
                         </div>
                         <div class="clear"></div>

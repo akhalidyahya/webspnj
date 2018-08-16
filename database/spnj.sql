@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10 Agu 2018 pada 04.34
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- Generation Time: Aug 11, 2018 at 12:12 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -32,18 +34,19 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `category`) VALUES
 (2, 'Website'),
 (11, 'Mograph'),
-(15, 'Android');
+(15, 'Android'),
+(16, 'Berita');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `galleries`
+-- Table structure for table `galleries`
 --
 
 CREATE TABLE `galleries` (
@@ -52,10 +55,17 @@ CREATE TABLE `galleries` (
   `picture` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `title`, `picture`) VALUES
+(38, 'Tes', 'uploads/galleries/5b6d44f3a99e6.png');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `karya`
+-- Table structure for table `karya`
 --
 
 CREATE TABLE `karya` (
@@ -67,10 +77,17 @@ CREATE TABLE `karya` (
   `team` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `karya`
+--
+
+INSERT INTO `karya` (`id`, `title`, `description`, `picture`, `category_id`, `team`) VALUES
+(2, 'VR', '<p>This is just a plain of text</p>\r\n', 'uploads/karya/5b6e0019ce5f5.png', 15, 'John, Will, jane, Ron');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `media`
+-- Table structure for table `media`
 --
 
 CREATE TABLE `media` (
@@ -79,15 +96,23 @@ CREATE TABLE `media` (
   `picture` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`id`, `title`, `picture`) VALUES
+(1, 'ITechno cup', 'uploads/media/5b6dd8203ed26.png'),
+(2, 'Civil Festival 2017', 'uploads/media/5b6dd8586a843.png');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
   `id` int(11) NOT NULL,
-  `judul` varchar(25) NOT NULL,
+  `judul` varchar(50) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `picture` varchar(50) NOT NULL,
   `date` datetime NOT NULL,
@@ -96,24 +121,17 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `judul`, `description`, `picture`, `date`, `user_id`, `category_id`) VALUES
-(2, 'dsdsdsa', '<p>dsdsadsadasdsadsa</p>\r\n', 'uploads/news/5b6c5e1cd65b3.jpg', '2018-08-08 17:30:36', 2, 2),
-(3, 'dfdfdsfds', '<p>fdsadsadsaddsadsa</p>\r\n', 'uploads/news/5b6c5e360d23d.jpg', '2018-08-08 17:31:02', 2, 11),
-(4, 'gfgfdgfd', '<p>sdfdfdfdsfsdfdsfdsfdsfds</p>\r\n', 'uploads/news/5b6c5e5741f4f.jpg', '2018-08-08 17:31:35', 2, 15),
-(5, 'dsdsdsa', '<p>dsdsadsadasdsadsa</p>\r\n', 'uploads/news/5b6c5e1cd65b3.jpg', '2018-08-09 17:30:36', 2, 2),
-(6, 'dfdfdsfds', '<p>fdsadsadsaddsadsa</p>\r\n', 'uploads/news/5b6c5e360d23d.jpg', '2018-08-09 17:31:02', 2, 11),
-(7, 'gfgfdgfd', '<p>sdfdfdfdsfsdfdsfdsfdsfds</p>\r\n', 'uploads/news/5b6c5e5741f4f.jpg', '2018-08-09 17:31:35', 2, 15),
-(8, 'dsdsdsa', '<p>dsdsadsadasdsadsa</p>\r\n', 'uploads/news/5b6c5e1cd65b3.jpg', '2018-08-07 17:30:36', 2, 2),
-(9, 'dfdfdsfds', '<p>fdsadsadsaddsadsa</p>\r\n', 'uploads/news/5b6c5e360d23d.jpg', '2018-08-07 17:31:02', 2, 11),
-(10, 'gfgfdgfd', '<p>sdfdfdfdsfsdfdsfdsfdsfds</p>\r\n', 'uploads/news/5b6c5e5741f4f.jpg', '2018-08-07 17:31:35', 2, 15);
+(10, 'Helllo World!', '<p>sdfdfdfdsfsdfdsfdsfdsfds</p>\r\n', 'uploads/news/5b6dd1a9f06e5.jpg', '2018-08-10 19:55:53', 4, 15),
+(12, 'Sosialisasi Jurusan TIK 2018', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'uploads/news/5b6dd15413789.png', '2018-08-10 19:54:28', 4, 16);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -126,12 +144,12 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `nama`, `email`, `password`, `role`, `picture`) VALUES
-(1, 'Admin', 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', 'admin', NULL),
-(2, 'Super Admin', 'superadmin@gmail.com', 'ac497cfaba23c4184cb03b97e8c51e0a', 'superadmin', NULL);
+(2, 'Super Admin', 'superadmin@gmail.com', '2a1a5192f230333c963a5a637ee6b3ba', 'superadmin', 'uploads/akun/5b6d452f36f8b.jpg'),
+(4, 'khalid Yahya', 'yahya@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'admin', 'uploads/akun/5b6d4524afeb2.png');
 
 --
 -- Indexes for dumped tables
@@ -184,48 +202,55 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
 --
 -- AUTO_INCREMENT for table `karya`
 --
 ALTER TABLE `karya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `karya`
+-- Constraints for table `karya`
 --
 ALTER TABLE `karya`
   ADD CONSTRAINT `karya_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `news`
+-- Constraints for table `news`
 --
 ALTER TABLE `news`
   ADD CONSTRAINT `fk_news_categories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `fk_news_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
